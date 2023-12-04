@@ -1,14 +1,17 @@
 {
+    "name": "",
+    "short_name": "",
     "icons": [
         {
-            "src": "/icon/cafe.campanella.png",
-            "type": "image/png",
-            "sizes": "192x192"
+            "src": "icon/cafe.campanella.png",
+            "sizes": "192x192",
+            "type": "image/png"
         },
         {
-            "src": "/icon/cafe.campanella.png",
-            "type": "image/png",
-            "sizes": "512x512"
+            "src": "icon/cafe.campanella.png",
+            "sizes": "512x512",
+            "type": "image/png"
         }
     ]
+
 }
