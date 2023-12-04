@@ -1,0 +1,427 @@
+@charset "UTF-8";
+
+:root {
+    color: #6d4c41;
+}
+
+body {
+    background-image: url(../images/zenntaihaikei.png);
+    font-family: 'Kaisei Decol', serif;
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 10;
+    pointer-events: none;
+    /* ローディング後にz-index戦争でヘッダーが負けるため */
+    background-color: #81D4FA;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    animation: fadeOut 1.5s 2.5s forwards;
+}
+
+.loading div{
+    text-align: center;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.loading__logo {
+    opacity: 0;
+    animation: logo_fade 2s 0.5s forwards;
+    width: 30%;
+    height: 25%;
+}
+
+@keyframes logo_fade {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* ---------------ここからヘッダー ---------------- */
+header {
+    background-image: url(../images/header.jpg);
+    background-size: cover;
+    background-position: right;
+    height: 600px;
+    padding: 1rem;
+}
+
+.HeaderLogo {
+    display: none;
+}
+
+header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+header nav ul {
+    background-color: rgba(255, 255, 255, 0.85);
+    width: 8rem;
+}
+
+header li {
+    color: var(--primary-color);
+    line-height: 5rem;
+    padding: 0.2rem;
+    font-weight: bold;
+}
+
+header li:hover {
+    border-bottom-color: transparent;
+    color: #81D4FA;
+    transform: translateY(0.185em);
+}
+
+/* ---------------ここからメイン ---------------- */
+
+main {
+    width: 80%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.50);
+}
+
+/* 文字を読みやすくするための白色透明背景（50％） */
+
+
+.catchPhrase {
+    color: var(--primary-color);
+    text-align: center;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.catchPhrase h2 {
+    font-size: 48px;
+    margin-bottom: 3.5rem;
+}
+
+.catchPhrase p {
+    letter-spacing: 0.35rem;
+    line-height: normal;
+}
+
+.swiper {
+    /* width: 70%;
+    height: 571px;  */
+    aspect-ratio: 16 / 9;
+    text-align: center;
+}
+
+.campaign {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.campaign img {
+    padding: 0.5rem;
+}
+
+.MenuContainer {
+    color: var(--primary-color);
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.MenuContainer h3 {
+    color: var(--primary-color);
+    font-size: 48px;
+    padding: 1.5rem;
+}
+
+.MenuWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.MenuItem {
+    width: 40%;
+    margin-bottom: 1rem;
+}
+
+.MenuItem img {
+    /* width: 360px;
+    height: 450px; */
+    margin-bottom: 1rem;
+    transform: rotate(2.5deg);
+}
+
+.MenuItem p {
+    letter-spacing: 0.2rem;
+    line-height: 1.3rem;
+}
+
+.SnsWrap {
+    margin-bottom: 2.5rem;
+}
+
+.SnsItem {
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.SnsWrap h3 {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 48px;
+    margin: 1.5rem;
+}
+
+.MapWrap {
+    text-align: center;
+}
+
+.MapWrap h3 {
+    font-size: 48px;
+    margin: 1.5rem;
+}
+
+.googleMap iframe {
+    margin-bottom: 0.5rem;
+}
+
+.MapWrap p {
+    color: var(--primary-color);
+    letter-spacing: 0.2rem;
+    line-height: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* ---------------ここからフッター ---------------- */
+
+footer {
+    background-color: #81D4FA;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+#logo {
+    /* width: 4%; */
+    padding: 1rem;
+}
+
+#logo img {
+    width: 10%;
+}
+
+footer #clumn {
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 1rem;
+    line-height: 2rem;
+}
+
+
+/* ---------------ここからレスポンシブ   ---------------- */
+
+@media (width < 800px) {
+    header {
+        max-width: 800px;
+        height: 300px;
+    }
+
+    header nav ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    header li {
+        line-height: 1.3rem;
+        padding: 0rem;
+    }
+
+    header li:nth-child(1) {
+        width: 15%;
+        height: 15%;
+    }
+
+    main {
+        max-width: 90%;
+    }
+
+    .catchPhrase h2 {
+        font-size: 24px;
+    }
+
+    .MenuContainer h3 {
+        font-size: 32px;
+        padding: 2rem;
+    }
+
+    .SnsWrap h3 {
+        font-size: 32px;
+        margin: 1.05rem;
+    }
+
+    .MapWrap h3 {
+        font-size: 32px;
+    }
+
+    .googleMap iframe {
+        width: 65%;
+        height: auto;
+        /* aspect-ratio: 16/9; */
+    }
+
+    #logo img {
+        width: 15%;
+    }
+
+
+}
+
+/* width < 800px */
+
+
+@media (width < 380px) {
+
+    header {
+        max-width: 380px;
+        height: 200px;
+        background-position: left;
+        background-position: top;
+    }
+
+    .HeaderLogo {
+        display: flex;
+        justify-content: center;
+        margin-top: 8rem;
+    }
+
+    .HeaderLogo img {
+        background-color: rgba(255, 255, 255, 0.65);
+        width: 18%;
+        border-radius: 5px;
+        padding-top: 0.5rem;
+    }
+
+    header li:nth-child(1) {
+
+        display: none;
+
+        /* width: 375px ;
+        text-align: center; */
+        /* height: 2.5rem;
+        ない方がいい */
+
+        /* position: absolute;
+        top: 250px;
+        left: 140px;
+        width: 20%;
+        頑張ってそれらしく足掻いた痕跡（できてない） */
+    }
+
+    main {
+        max-width: 85%;
+    }
+
+    .catchPhrase .catchPhrase h2 {
+        font-size: 20px;
+    }
+
+    .catchPhrase p {
+        letter-spacing: 0.15rem;
+    }
+
+    .MenuContainer h3 {
+        font-size: 20px;
+    }
+
+    .MenuItem {
+        width: 90%;
+    }
+
+    .MenuItem p {
+        letter-spacing: 0.1rem;
+        line-height: 1.05rem;
+    }
+
+    .SnsWrap {
+        margin-bottom: 0.5rem;
+    }
+
+    .SnsWrap h3 {
+        font-size: 20px;
+        margin: 0.5rem;
+    }
+
+    .MapWrap h3 {
+        font-size: 20px;
+    }
+
+    .MapWrap p {
+        letter-spacing: 0.15rem;
+        line-height: 1.3rem;
+        margin-top: 0.5rem;
+    }
+
+    footer {
+        padding: 0.1rem;
+    }
+
+    #logo {
+        padding: 0.5rem;
+    }
+
+    #logo img {
+        width: 20%;
+    }
+
+    footer #clumn {
+        font-size: 1.2rem;
+        letter-spacing: 1rem;
+        line-height: 1.2rem;
+    }
+
+}
+
+/* width < 380px */
