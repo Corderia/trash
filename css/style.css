@@ -32,10 +32,6 @@ img {
     animation: fadeOut 1.5s 2.5s forwards;
 }
 
-.loading section {
-    text-align: center;
-}
-
 @keyframes fadeOut {
     0% {
         opacity: 1;
@@ -50,8 +46,6 @@ img {
 .loading__logo {
     opacity: 0;
     animation: logo_fade 2s 0.5s forwards;
-    width: 30%;
-    height: 25%;
 }
 
 @keyframes logo_fade {
