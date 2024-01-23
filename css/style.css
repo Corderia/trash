@@ -32,7 +32,7 @@ img {
     animation: fadeOut 1.5s 2.5s forwards;
 }
 
-.loading div{
+.loading section {
     text-align: center;
 }
 
@@ -76,7 +76,6 @@ header {
     background-image: url(../images/header.jpg);
     background-size: cover;
     background-position: right;
-    max-width: 100%;
     height: 600px;
     padding: 1rem;
 }
@@ -114,7 +113,7 @@ header li:hover {
 /* ---------------ここからメイン ---------------- */
 
 main {
-    width: 80%;
+    width: 85%;
     margin: auto;
     background-color: rgba(255, 255, 255, 0.50);
 }
@@ -181,7 +180,7 @@ main {
 }
 
 .MenuItem {
-    width: 40%;
+    width: 47%;
     margin-bottom: 1rem;
 }
 
@@ -190,6 +189,11 @@ main {
     height: 450px; */
     margin-bottom: 1rem;
     transform: rotate(2.5deg);
+
+    /* -moz-box-shadow: 0px 7px 9px 0px rgba(0, 0, 0, 0.29);
+    -webkit-box-shadow: 0px 7px 9px 0px rgba(0, 0, 0, 0.29);
+    -ms-box-shadow: 0px 7px 9px 0px rgba(0, 0, 0, 0.29);
+    box-shadow: 0px 7px 9px 0px rgba(0, 0, 0, 0.29); */
 }
 
 .MenuItem p {
@@ -260,9 +264,11 @@ footer #clumn {
 
 /* ---------------ここからレスポンシブ   ---------------- */
 
-@media (max-width : 800px) {
+@media screen and (max-width: 800px ) {
     header {
-        height: 300px;
+        max-width: 800px;
+        height: 50vh;
+        background-position: left;
     }
 
     header nav ul {
@@ -280,13 +286,12 @@ footer #clumn {
     }
 
     header li:nth-child(1) {
-        width: 10% ;
-        padding-top: 0.5rem;
-        /* height: 15% ; */
+        width: 15%;
+        height: 15%;
     }
 
     main {
-        max-width: 90%;
+        max-width: 95%;
     }
 
     .catchPhrase h2 {
@@ -323,33 +328,40 @@ footer #clumn {
 /* width < 800px */
 
 
-@media (max-width : 375px) {
+@media screen and (max-width: 500px ) {
 
     header {
-        height: 200px;
-        background-position: left;
-        background-position: top;
+        max-width: 500px;
     }
 
     .HeaderLogo {
         display: flex;
         justify-content: center;
-        margin-top: 8rem;
+        margin-top: 85%;
+        margin-top: 22.5rem;
     }
 
     .HeaderLogo img {
         background-color: rgba(255, 255, 255, 0.65);
-        width: 18%;
+        width: 5rem;
         border-radius: 5px;
         padding-top: 0.5rem;
     }
 
     header li:nth-child(1) {
-        display: none;
-    }
 
-    main {
-        max-width: 85%;
+        display: none;
+
+        /* width: 375px ;
+        text-align: center; */
+        /* height: 2.5rem;
+        ない方がいい */
+
+        /* position: absolute;
+        top: 250px;
+        left: 140px;
+        width: 20%;
+        頑張ってそれらしく足掻いた痕跡（できてない） */
     }
 
     .catchPhrase .catchPhrase h2 {
@@ -365,7 +377,8 @@ footer #clumn {
     }
 
     .MenuItem {
-        width: 90%;
+        width: 98%;
+        padding: 2%;
     }
 
     .MenuItem p {
@@ -412,4 +425,4 @@ footer #clumn {
 
 }
 
-/* width < 380px */
+/* width < 500px */
