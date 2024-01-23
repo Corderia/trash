@@ -328,7 +328,7 @@ footer #clumn {
 /* width < 800px */
 
 
-@media (width < 500px) {
+@media (max-width:500px) {
 
     header {
         max-width: 375px;
